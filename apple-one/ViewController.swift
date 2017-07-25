@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     func getArticle(){
-        Alamofire.request("https://qiita.com/api/v2/items",method:.get, parameters:nil)
+        Alamofire.request("https://qiita.com/api/v2/items",method:.get)
             .responseJSON { response in
-                print(response.result.value as Any) // responseのresultプロパティのvalueプロパティをコンソールに出力
+                print(response.result.value as Any)
         }
     }
     
